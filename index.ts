@@ -1,10 +1,9 @@
 import { Canvas } from "./src/renderEngine/canvas";
-import { Point } from "./src/renderEngine/point";
-import { RGB, RGBA } from "./src/Simplified/simple";
+import { RGB, RGBA, CreateCanvas, CreatePoint } from "./src/Simplified/simple";
 
 // 拾取页面中的DOM画布元素e
 let canvasParentDom = document.querySelector("#vcanvasparent") as HTMLDivElement;
-var H_Canvas: Canvas = Canvas.createCanvas(canvasParentDom, 2);
+var H_Canvas: Canvas = CreateCanvas(canvasParentDom, 2);
 
 H_Canvas.setBackgroundColor(RGB(0, 0, 0));
 
@@ -23,11 +22,11 @@ H_Canvas.line(600, 600, 800, 800);
 
 H_Canvas.noFill();
 H_Canvas.poly([
-    Point.createPoint(900, 140),
-    Point.createPoint(800, 400),
-    Point.createPoint(700, 300),
-    Point.createPoint(600, 420),
-    Point.createPoint(500, 510),
-    Point.createPoint(400, 1600),
+    CreatePoint(900, 140),
+    CreatePoint(800, 400),
+    CreatePoint(700, 300),
+    CreatePoint(600, 420),
+    CreatePoint(500, 510),
+    CreatePoint(400, 1600),
 ])
 
